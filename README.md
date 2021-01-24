@@ -1,3 +1,27 @@
+# 解题思路
+
+1. 框架选型
+
+因为是官网，一般要求拥有最快的加载速度（排除普通 SPA），在动态内容不多的情况下（用不着 SSR），nextjs 提供的 Static Generation 成为首选。
+
+2.  代码结构
+
+项目需求简单，本身无论如何组织 next 项目都没有太大问题，如果能明确在短期内不会需求膨胀，我就直接采用 next 官方的代码结构了，相反如果能明确知道项目复杂度将持续上升，或者有相关联的项目共享类型或页面组件，那么我会毫不有序选择 monorepo。一方面我对 nrwl/nx 的 monorepo 比较熟悉，另一方面面试时我有提到过 monorepo，但毕竟没有代码，不能讲述清楚，所以这里用 monorepo 来做这个简单的小项目。
+
+3. 视觉要求
+   视觉效果要求上，我个人比较喜欢 JSS 方案中的 styled-component。为了可能的 layout 的复用，我会把 layout 抽离开。为了 pc 和 mobile 分离，我会用静态路由进行区分。考虑到 antd 太大，其中大部分 UI 组件我们都不需要，所以这里就不引入外部组件库，就简单写一点自己的布局组件，按钮和输入框组件，或者使用 antd 的下层实现，react-component。
+
+4. 前端交互（表单验证和成功/报错提醒）
+   因为是官网，表单验证也考虑用比较小的库，经过一个简单的[调研](https://blog.bitsrc.io/react-hook-form-vs-formik-form-builder-library-for-react-23ed559fdae)，我打算放弃我用过的 formik，转而使用最新的，跟 hook 结合更好的 react-hook-form.
+
+对于弹窗/报错打算引入一个小的 UI 库来解决，可以考虑 antd 的下层实现 rc-component。
+
+5. 前后端交互（接口）
+   接口调用我喜欢用 axios，这里就不多纠结了。对于每个的后端，我一般会统一处理报错信息，对于单个的接口，我喜欢把单个的 configBuilder 写成一个函数。
+
+6. 额外考虑
+   考虑到 airwallex 是一家跨国公司，一定也需要一个完善的 i18n 方案，我这里做一个简单的 demo，自动检测用户语言。
+
 # Rai
 
 This project was generated using [Nx](https://nx.dev).
