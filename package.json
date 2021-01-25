@@ -21,6 +21,7 @@
     "format": "nx format:write",
     "format:write": "nx format:write",
     "format:check": "nx format:check",
+    "g:lib": "yarn nx g @nrwl/react:lib",
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
@@ -43,13 +44,16 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "document-register-element": "1.13.1",
     "next": "10.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-hook-form": "^6.14.2",
+    "react-intl": "^5.10.16",
     "react-is": "17.0.1",
-    "styled-components": "5.2.1",
+    "styled-components": "^5.2.1",
     "tslib": "^2.0.0"
   },
   "devDependencies": {

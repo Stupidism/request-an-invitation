@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rai/components": ["libs/components/src/index.ts"],
+      "@rai/layout": ["libs/layout/src/index.ts"],
+      "@rai/fake-auth-api": ["libs/fake-auth-api/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

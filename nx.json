@@ -17,6 +17,9 @@
   },
   "projects": {
     "homepage": { "tags": [] },
-    "homepage-e2e": { "tags": [], "implicitDependencies": ["homepage"] }
+    "homepage-e2e": { "tags": [], "implicitDependencies": ["homepage"] },
+    "components": { "tags": [] },
+    "layout": { "tags": [] },
+    "fake-auth-api": { "tags": [] }
   }
 }
